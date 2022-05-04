@@ -1,4 +1,3 @@
-from typing import KeysView
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
@@ -11,10 +10,6 @@ sleep(5)
 # Lấy link của các bài viết
 linkList = [link.get_attribute('data-vr-contentbox-url') \
             for link in browser.find_elements_by_tag_name('article')]
-
-for link in linkList:
-    if link != None:
-        print(link.find('https://thanhnien.vn/') == 0)
 
 # Truy cập vào từng link
 for link in linkList:
